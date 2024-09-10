@@ -1,0 +1,46 @@
+//task3
+#!/bin/bash
+str1=$*
+len1=${#str1}
+echo -n "+-"
+for ((a=1;a<=len1;a++))
+do
+echo -n "-"
+done
+echo "-+"
+echo "| $str1 |"
+echo -n "+-"
+for ((a=1;a<=len1;a++))
+do
+echo -n "-"
+done
+echo "-+"
+
+
+
+//task4
+#!/bin/bash
+grep -o "[a-zA-Z]*" hello.cpp | sort -u
+
+
+#include <iostream>
+using namespace std;
+int main(){
+        cout << "Hello, Hi!";
+        return 0;
+}
+
+
+//task 5
+#!/bin/bash
+chmod u+rwx $1
+cp $1 /usr/local/bin
+
+//task6
+#!/bin/bash
+line=$(head -1 $1)
+if [[ $line == "//"* ]] || [[ $line == "#"*  ]]; then
+echo "First line have comment"
+else
+echo "First line don't have comment"
+fi
